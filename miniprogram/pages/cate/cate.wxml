@@ -1,0 +1,67 @@
+<!--pages/cate/cate.wxml-->
+<view>
+<van-search
+  value="{{ value }}" shape="round" background="#99CCFF" placeholder="请输入搜索关键词" bind:search="search"
+/></view>
+
+<!-- 侧边栏方案 -->
+<!-- <van-sidebar active-key="{{ activeKey }}">
+  <van-sidebar-item title="蔬菜" />
+  <van-sidebar-item title="水果" />
+  <van-sidebar-item title="电器" />
+  <van-sidebar-item title="食品" />
+  <van-sidebar-item title="家装" />
+  <van-sidebar-item title="鞋包" />
+  <van-sidebar-item title="零食" />
+  <van-sidebar-item title="运动" />
+  <van-sidebar-item title="百货" />
+  <van-sidebar-item title="水果" />
+  <van-sidebar-item title="医药" />
+
+</van-sidebar>
+
+<van-notify id="van-notify" /> -->
+
+
+<!-- 标签 -->
+
+<van-tabs swipeable custom-class="custom">
+  <van-tab title="元宵特惠">
+  <block wx:for="{{tehui_list}}" wx:key="index">
+    <navigator  url="../product_detial/product_detial?id={{item._id}}">
+    <van-card tag="限时抢" price="{{item.price}}" desc="{{item.name_n}}"title="{{item.name}}"thumb="{{item.img[0]}}">
+      </van-card>
+</navigator>
+</block>
+ </van-tab>
+  <van-tab title="上新">
+    <block wx:for="{{shangxin_list}}" wx:key="index">
+    <van-card   tag="限时抢" price="{{item.price}}"desc="{{item.name_n}}"title="{{item.name}}"thumb="{{item.img[0]}}"
+>
+</van-card></block>
+        </van-tab>
+  <van-tab title="蔬菜"> <block wx:for="{{tehui_list}}" wx:key="index">
+    <van-card   tag="限时抢" price="{{item.price}}"desc="{{item.name_n}}"title="{{item.name}}"thumb="{{item.img[0]}}"
+>
+</van-card></block></van-tab>
+  <van-tab title="水果"> <block wx:for="{{shangxin_list}}" wx:key="index">
+    <van-card   tag="限时抢" price="{{item.price}}"desc="{{item.name_n}}"title="{{item.name}}"thumb="{{item.img[0]}}"
+>
+</van-card></block></van-tab>
+  <van-tab title="酒水"> <block wx:for="{{tehui_list}}" wx:key="index">
+    <van-card   tag="限时抢" price="{{item.price}}"desc="{{item.name_n}}"title="{{item.name}}"thumb="{{item.img[0]}}"
+>
+</van-card></block></van-tab>
+  <van-tab title="粮油"> <block wx:for="{{shangxin_list}}" wx:key="index">
+    <van-card   tag="限时抢" price="{{item.price}}"desc="{{item.name_n}}"title="{{item.name}}"thumb="{{item.img[0]}}"
+>
+</van-card></block></van-tab>
+  <van-tab title="肉蛋"> <block wx:for="{{tehui_list}}" wx:key="index">
+    <van-card   tag="限时抢" price="{{item.price}}"desc="{{item.name_n}}"title="{{item.name}}"thumb="{{item.img[0]}}"
+>
+</van-card></block></van-tab>
+  <van-tab title="零食"> <block wx:for="{{shangxin_list}}" wx:key="index">
+    <van-card   tag="限时抢" price="{{item.price}}"desc="{{item.name_n}}"title="{{item.name}}"thumb="{{item.img[0]}}"
+>
+</van-card></block></van-tab>
+</van-tabs>

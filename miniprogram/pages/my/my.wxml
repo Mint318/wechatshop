@@ -1,0 +1,106 @@
+<!--pages/my/my.wxml-->
+
+<!-- 个人信息 -->
+<view class="lay_row_spa pad_20 user_msg">
+    <view class="lay_row_sta" style="width: 50%;">
+        <image src="{{user.userInfo.avatarUrl}}" class="avg"></image>
+        <text style="color: white;">{{user.userInfo.nickName}}</text>
+     </view>
+     
+
+</view>
+
+<!-- 订单 -->
+<view class="lay_col_cen pad_20">
+    <view class="lay_clo_cen pad_20 order_case">
+        <view class="lay_row_sta">
+            <text style="font-size: 26rpx; color:#3399CC;">我的订单</text>
+        </view>
+        <van-divider  style="width: 100%;color: #dbdbdb;" />
+        <view class="lay_row_spa">
+        <navigator url="../order/order?type=已付款" class="lay_clo_spa" style="height: 120rpx;">
+            <image src="cloud://cloud1-6guij3qg412bbcaa.636c-cloud1-6guij3qg412bbcaa-1309612400/icon/已付款.png" class="order_icon"></image>
+            <text>已付款</text>
+        </navigator>
+        <navigator url="../order/order?type=待发货" class="lay_clo_spa" style="height: 120rpx;">
+            <image src="cloud://cloud1-6guij3qg412bbcaa.636c-cloud1-6guij3qg412bbcaa-1309612400/icon/待发货.png" class="order_icon"></image>
+            <text>待发货</text>
+        </navigator>
+        <navigator url="../order/order?type=运输中" class="lay_clo_spa" style="height: 120rpx;">
+            <image src="cloud://cloud1-6guij3qg412bbcaa.636c-cloud1-6guij3qg412bbcaa-1309612400/icon/01运输中、物流.png" class="order_icon"></image>
+            <text>运输中</text>
+        </navigator>
+        <view class="lay_clo_cen">
+            <image src="cloud://cloud1-6guij3qg412bbcaa.636c-cloud1-6guij3qg412bbcaa-1309612400/icon/售后.png" class="order_icon"></image>
+            <text>售后</text>
+        </view>
+    
+    
+    </view>
+    </view>
+
+
+    <view class="lay_col_cen pad_20 fun_case">
+        <view class="lay_row_spa fun_row">
+            <view class="fun_item lay_clo_cen" bindtap="my_address">
+                <image src="cloud://cloud1-6guij3qg412bbcaa.636c-cloud1-6guij3qg412bbcaa-1309612400/icon/我的地址.png" class="fun_img"></image>
+                <text>我的地址</text>
+                </view>
+                <view class="fun_item lay_clo_cen" bindtap="showlogin_case">
+                <image src="cloud://cloud1-6guij3qg412bbcaa.636c-cloud1-6guij3qg412bbcaa-1309612400/icon/后台管理-后台管理.png" class="fun_img"></image>
+                <text>后台管理</text>
+                </view>
+                    <view class="fun_item lay_clo_cen">
+                    <image src="cloud://cloud1-6guij3qg412bbcaa.636c-cloud1-6guij3qg412bbcaa-1309612400/icon/领券中心.png" class="fun_img"></image>
+                    <text>领券中心</text>
+                    </view>
+                
+                    </view>
+                    <view class="lay_row_spa fun_row">
+                <view class="fun_item lay_clo_cen">
+                    <image src="cloud://cloud1-6guij3qg412bbcaa.636c-cloud1-6guij3qg412bbcaa-1309612400/icon/更多.png" class="fun_img"></image>
+                    <text>消息</text>
+                    </view>
+                    <view class="fun_item lay_clo_cen">
+                    <image src="cloud://cloud1-6guij3qg412bbcaa.636c-cloud1-6guij3qg412bbcaa-1309612400/icon/我的评价.png" class="fun_img"></image>
+                    <text>我的评价</text>
+                    </view> 
+                    <navigator class="fun_item lay_clo_cen" url="../install/install">
+                    <image src="cloud://cloud1-6guij3qg412bbcaa.636c-cloud1-6guij3qg412bbcaa-1309612400/icon/设置.png" class="fun_img"></image>
+                    <text>设置</text>
+                    </navigator>
+                    
+                    </view>
+                   
+                
+    
+    </view>
+</view>
+
+<!-- 登录弹窗 -->
+<van-popup show="{{show_login}}" round position="bottom" closeable
+  custom-style="height: 60%;" bind:close="onClose">
+    <view class="lay_clo_sta pad_20">
+        <view class="lay_row_cen" style="height: 80rpx;">
+            <text>登陆</text>
+        </view>
+        <view class="lay_row_sta" style="width: 70%; margin-top: 80rpx; border: 2rpx 2rpx solid #888888;" >
+            <van-icon name="friends-o" />
+            <input type="text" name="" id="" placeholder="账号" style="margin-left: 20rpx;" data-name="username" bindinput="input_msg"/>
+        </view>
+        <van-divider  style="width: 70%;color: #dbdbdb;" />
+        <view class="lay_row_sta" style="width: 70%; margin-top: 30rpx;" >
+            <van-icon name="shield-o" />
+            <input type="text" name="" id="" placeholder="密码" style="margin-left: 20rpx;" data-name="password" bindinput="input_msg"/>
+        </view>
+        <van-divider  style="width: 70%;color: #dbdbdb;" />
+        <button style="background-color:#99CCFF ; color: white; width: 70%;border-radius: 10rpx;margin-top: 50rpx;" bindtap="login_admin" disabled="{{is_login?'true':''}}">登陆</button>
+    </view>
+  
+  
+  
+  
+  
+  
+  
+  </van-popup>

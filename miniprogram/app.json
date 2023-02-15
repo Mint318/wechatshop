@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/home/home "
+    ,"pages/my/my",
+    "pages/cate/cate",
+    "pages/shop/shop",
+    "pages/product_detial/product_detial",
+    "pages/shopping_car/shopping_car",
+    "pages/order/order",
+    "pages/admin_index/admin_index",
+    "pages/admin_product/admin_product",
+    "pages/install/install"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#99CCFF",
+    "navigationBarTitleText": "云边有个小卖部",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance":100
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-sidebar": "@vant/weapp/sidebar/index",
+    "van-sidebar-item": "@vant/weapp/sidebar-item/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index"
+  },
+  "tabBar": {
+    "backgroundColor": "#99CCFF",
+    "list": [{
+      "pagePath": "pages/home/home ",
+      "text": "首页",
+      "iconPath": "images/首页2.png",
+      "selectedIconPath": "images/首页.png"
+    },
+  {
+    "pagePath": "pages/cate/cate",
+    "text": "分类",
+    "iconPath": "images/分类2.png",
+    "selectedIconPath": "images/分类.png"
+  },
+    {
+      "pagePath": "pages/shopping_car/shopping_car",
+      "text": "购物车",
+      "iconPath":"images/购物车2.png",
+      "selectedIconPath": "images/购物车.png"
+    },{
+      "pagePath": "pages/my/my",
+      "text": "我的",
+      "iconPath": "images/我的.png",
+      "selectedIconPath": "images/我的-.png"
+    }
+  ]
+  
+  }
+ 
+ 
+ 
+}

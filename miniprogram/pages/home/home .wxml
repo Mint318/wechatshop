@@ -1,0 +1,67 @@
+<!--pages/home/home .wxml-->
+<!-- 搜索框 -->
+<view>
+<van-search
+  value="{{ value }}" shape="round" background="#99CCFF" placeholder="请输入搜索关键词" bind:search="search"
+/></view>
+
+<van-notice-bar
+  left-icon="volume-o"
+  text="在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。（仅供学习使用）"
+/>
+<!-- 轮播图 -->
+
+<view class="swp">
+    <swiper class="swp_a" autoplay="true" circular="true" indicator-dots="true">
+        <block wx:for="{{swiper}}" wx:key="index">
+            <swiper-item>
+                <image src="{{item.src}}" class="swp_img"></image></swiper-item></block></swiper>
+</view>
+<van-grid custom-class="grid" border="{{ false }}" icon-size="40px">
+  <van-grid-item icon="cloud://cloud1-6guij3qg412bbcaa.636c-cloud1-6guij3qg412bbcaa-1309612400/icon/新春-春.png" text="春" />
+  <van-grid-item icon="cloud://cloud1-6guij3qg412bbcaa.636c-cloud1-6guij3qg412bbcaa-1309612400/icon/春节-节.png" text="节" />
+  <van-grid-item icon="cloud://cloud1-6guij3qg412bbcaa.636c-cloud1-6guij3qg412bbcaa-1309612400/icon/春节-快.png" text="快" />
+  <van-grid-item icon="cloud://cloud1-6guij3qg412bbcaa.636c-cloud1-6guij3qg412bbcaa-1309612400/icon/新春-乐.png" text="乐" />
+</van-grid>
+
+<!-- 板块 -->
+
+<view class="fun">
+
+<view class="fun_title"><text>今日特惠</text></view>
+    
+    <view class="fun_1">
+    <view class="fun_left">
+    <image src="cloud://cloud1-6guij3qg412bbcaa.636c-cloud1-6guij3qg412bbcaa-1309612400/images/2.png" style="width: 100%;height: 100%;"></image>
+    </view>
+    <view class="fun_right">
+    <view class="right_1">
+        <image src="cloud://cloud1-6guij3qg412bbcaa.636c-cloud1-6guij3qg412bbcaa-1309612400/images/1.png" style="width: 100%;height: 100%;"></image></view>
+    <view class="right_2">
+        <image src="cloud://cloud1-6guij3qg412bbcaa.636c-cloud1-6guij3qg412bbcaa-1309612400/images/3.png" style="width: 100%;height: 100%;"></image></view>
+    </view></view>
+</view>
+
+
+
+<!-- 商品列表 -->
+<view class="pro">
+    <van-divider contentPosition="center" style="width: 98%;margin-bottom: 10rpx;">商品</van-divider>
+    <view class="pro_all">
+        <block wx:for="{{pro_list}}" wx:key="index">
+            <navigator class="pro_detail" url="../product_detial/product_detial?id={{item._id}}">
+                <image src="{{item.img[0]}}" class="pro_img"></image>
+                <view class="pro_name">
+                    <text>{{item.name}}</text></view>
+            <view class="pro_fun">
+            <view class="pro_price" style="color: red;font-size: large;"><text>{{item.price}}</text>
+           <text style="color: #888;font-size: 15px;margin-left: 15rpx;text-decoration: line-through;">{{item.h_price}}</text></view>
+            <van-icon name="shopping-cart-o"   size="40rpx" color="#FF9966"/></view></navigator>
+
+        </block>
+    </view>
+</view>
+
+
+<!-- 留白 -->
+<view style="width: 100% ; height: 300rpx;"></view>

@@ -1,0 +1,47 @@
+<!--pages/order/order.wxml-->
+<view class="lay_row_spa  head">
+    <view class="lay_row_cen {{titile=='已付款'?'select_titile':''}}" data-name="已付款" bindtap="select_titile">
+        <text>已付款</text>
+    </view>
+    <view class="lay_row_cen {{titile=='待发货'?'select_titile':''}}" data-name="待发货" bindtap="select_titile">
+        <text>待发货</text>
+    </view>
+    <view class="lay_row_cen {{titile=='运输中'?'select_titile':''}}" data-name="运输中" bindtap="select_titile">
+        <text>运输中</text>
+    </view>
+</view>
+
+<scroll-view style="width: 100%;height: 9vh;" scroll-y="true">
+    <view class="lay_clo_sta pad_20">
+        <block wx:for="{{order}}" wx:key="index">
+            <view class="lay_clo_cen pad_20 order">
+                <view class="lay_row_spa">
+                    <text style="color: #888888;">{{item._id}}</text>
+                    <text>{{item.type}}</text>
+                </view>
+                <van-divider  style="width: 100%;margin-top: 10rpx; margin-bottom: 10rpx;" />
+                <view class="lay_clo_cen">
+                    <block wx:for="{{item.goods}}" wx:for-item="goods" wx:key="index">
+                        <view class="lay_row_spa" style="margin-bottom: 10rpx;">
+                            <image src="{{goods.product_img}}" class="goods_img"></image>
+                            <view class="lay_clo_cen" style="height: 120rpx; width: 40%; align-items: flex-start;">
+                                <text>{{goods.product_name}}</text>
+                                <text>{{goods.product_specs}}x{{goods.product_num}}</text>
+                            
+                            </view>
+                            <text style="color: red;">{{goods.product_price}}</text>
+                        </view>
+                    </block>
+                </view>
+                <van-divider  style="width: 100%;margin-top: 10rpx; margin-bottom: 10rpx;" />
+                <!-- <view class="lay_row_sta">
+                    <text>{{item.time}}</text>
+                </view> -->
+            </view>
+        </block>
+    </view>
+
+
+
+
+</scroll-view>

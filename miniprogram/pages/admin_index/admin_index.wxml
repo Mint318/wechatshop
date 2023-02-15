@@ -1,0 +1,60 @@
+<view class="lay_clo_cen pad_20 head" >
+    <text>恭喜发财!!!!</text>
+    
+</view>
+
+
+<view class="lay_clo_cen pad_20" style="margin-top: 50rpx;">
+    <view class="lay_row_spa">
+    <navigator  class="lay_clo_cen pad_20 case" style="width: 30%;" url="../admin_product/admin_product">
+            <image src="cloud://cloud1-6guij3qg412bbcaa.636c-cloud1-6guij3qg412bbcaa-1309612400/icon/上传商品.png" class="fun_img"></image>
+            <text style="font-size: 25rpx;"> 上传商品</text>
+        </navigator>
+        <view class="lay_clo_cen pad_20 case" style="width: 30%;">
+            <image src="cloud://cloud1-6guij3qg412bbcaa.636c-cloud1-6guij3qg412bbcaa-1309612400/icon/上传商品.png" class="fun_img"></image>
+            <text style="font-size: 25rpx;">上传商品</text>
+        </view>
+        <view class="lay_clo_cen pad_20 case" style="width: 30%;">
+            <image src="cloud://cloud1-6guij3qg412bbcaa.636c-cloud1-6guij3qg412bbcaa-1309612400/icon/上传商品.png" class="fun_img"></image>
+            <text style="font-size: 25rpx;">上传商品</text>
+        </view>
+    
+    </view>
+    <view class="lay_row_spa" style="margin-top: 30rpx;">
+        <view class="lay_clo_cen pad_20 case" style="width: 46%;">
+            <image src="cloud://cloud1-6guij3qg412bbcaa.636c-cloud1-6guij3qg412bbcaa-1309612400/icon/修改订单.png" class="fun_img"></image>
+            <text style="font-size: 25rpx;">订单管理</text>
+        </view>
+        <view class="lay_clo_cen pad_20 case" style="width: 46%;">
+            <image src="cloud://cloud1-6guij3qg412bbcaa.636c-cloud1-6guij3qg412bbcaa-1309612400/icon/修改订单.png" class="fun_img"></image>
+            <text style="font-size: 25rpx;">上传商品</text>
+        </view>
+    
+    </view>
+    </view>
+
+
+<view class="lay_clo_cen pad_20 case" style="margin-top: 40rpx;">
+    <view class="lay_row_sta">
+        <text style="color: white;">数据中心</text>
+    </view>
+    <van-divider style="width: 100%; " custom-style="margin-top:10rpx;margin-bottom10rpx"></van-divider>
+    <view class="lay_row_cen" style="border-bottom: 2rpx solid #888888;">
+        <view class="lay_clo_sta" style="width: 49%;height: 120rpx;border-right: 2rpx solid #888888;">
+            <text>0</text>
+            <text>待发货</text>
+        </view>
+        <view class="lay_clo_sta" style="width: 49%;height:120rpx;">
+            <text>0</text>
+            <text>待售后</text></view>
+    </view>
+    <view class="lay_row_cen" >
+        <view class="lay_clo_sta" style="width: 49%;height: 120rpx;border-right: 2rpx solid #888888;">
+            <text>0</text>
+            <text>当日订单量</text>
+        </view>
+        <view class="lay_clo_sta" style="width: 49%;height: 120rpx;">
+            <text>0</text>
+            <text>当月订单量</text></view>
+    </view>
+    </view>

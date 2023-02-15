@@ -1,0 +1,4 @@
+/* pages/cate/cate.wxss */
+.custom{
+    width: 100%;
+}

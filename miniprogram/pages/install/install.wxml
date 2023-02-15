@@ -1,0 +1,10 @@
+<!--pages/install/install.wxml-->
+<view style="margin-top: 20rpx;">
+    <van-cell title="账号与安全" is-link />
+    <van-cell title="支付" is-link />
+    <van-cell title="隐私" is-link />
+    <van-cell title="通用" is-link />
+    <van-cell title="帮助与反馈" is-link />
+    <van-cell title="关于" is-link />
+
+</view>

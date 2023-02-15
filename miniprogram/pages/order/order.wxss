@@ -1,0 +1,23 @@
+/* pages/order/order.wxss */
+.head{
+    height: 6vh;
+    font-size:25rpx;
+    border-bottom: 2rpx solid #888888;
+}
+.select_titile{
+    height: 100% !important;
+    color: #3399CC;
+    border-bottom: 4rpx solid #3399CC;
+}
+.order{
+    background-color: #ffffff;
+    border-radius: 10rpx;
+    margin-bottom: 20rpx;
+    font-size: 25rpx;
+
+}
+.goods_img{
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 10rpx;
+}

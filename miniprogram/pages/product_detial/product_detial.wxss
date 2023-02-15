@@ -1,0 +1,31 @@
+/* pages/product_detial/product_detial.wxss */
+.pro_case{
+    width: 100%;
+    height: 600rpx;
+
+}
+.pro_img{
+    width: 100%;
+    height: 600rpx;
+}
+.pro_msg{
+    background-color: white;
+    border-radius: 10rpx;
+    box-shadow: 5rpx 5rpx 10rpx #c5c1c1
+}
+.select_case{
+    background-color: #ffffff;
+    border-radius: 10rpx;
+    margin-top: 20rpx;
+}
+.pro_specs{
+    
+    flex-wrap: wrap;
+}
+.pro_img_detail{
+    width: 100%;
+
+}
+.aa{
+    z-index: 999;
+}

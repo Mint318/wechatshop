@@ -1,0 +1,99 @@
+<view class="lay_clo_sta">
+    <!-- 商品信息 -->
+    <view class="lay_clo_cen pad_20 case">
+        <view class="lay_row_sta">
+            <text>商品信息</text>
+        </view>
+        <van-divider style="width: 100%;" custom-style="margin-top10rpx;margin-bottom10rpx"/>
+        <view class="lay_row_sta" style="font-size: 25rpx;height: 70rpx;">
+            <text>商品名:</text>
+            <input type="text" placeholder="请输入商品名" style="margin-left:10rpx;" data-name="name" bindinput="input_msg"/>    
+        </view>
+        <view class="lay_row_sta" style="font-size: 25rpx;height: 70rpx;">
+            <text>商品原价:</text>
+            <input type="text" placeholder="请输入商品原价" style="margin-left:10rpx;"data-name="h_price" bindinput="input_msg"/>    
+        </view>
+        <view class="lay_row_sta" style="font-size: 25rpx;height: 70rpx;">
+            <text>商品价格:</text>
+            <input type="text" placeholder="请输入商品价格" style="margin-left:10rpx;"data-name="price" bindinput="input_msg"/>    
+        </view>
+
+    </view>
+
+<!-- Fenlei  -->
+<view class="lay_col_cen pad_20 case" style="margin-top: 40rpx; width: 90%;">
+        <view class="lay_row_spa">
+            <text>商品分类</text>
+        </view>
+        <van-divider style="width: 100%;" custom-style="margin-top:10rpx;margin-bottom:10rpx"/>
+        <view class="lay_row_sta" style="flex-wrap: wrap;">
+                    <van-radio-group value="{{classify}}" bind:change="select_classify" direction="horizontal">
+                    <block wx:for="{{classify}}" wx:key="index">
+                        <van-radio name="{{item.name}}" >{{item.name}} </van-radio>
+                    </block>
+                    
+                    
+                    </van-radio-group>
+        </view>
+        
+        </view>
+
+    <!-- 商品规格 -->
+    <view class="lay_col_cen pad_20 case" style="margin-top: 40rpx; width: 90%;">
+        <view class="lay_row_spa">
+            <text>商品规格</text>
+            <view class="lay_row_spa" style="width: 70%;">
+                <view class="lay_row_cen input_case" style="width: 70%;" >
+                    <input type="text" name="" id="" placeholder="请输入规格名" value="{{input_specs}}" bindinput="input_msg" data-name="input_specs"/>
+                </view>
+                <van-button type="primary" size="small" bind:click="add_specs" color="#1296db">新增</van-button>
+            </view>
+           
+        </view>
+        <van-divider style="width: 100%;" custom-style="margin-top:10rpx;margin-bottom:10rpx"/>
+        <view class="lay_row_sta" style="flex-wrap: wrap;">
+            <block wx:for="{{specs}} " wx:key="index">
+                <view class="lay_row_cen specs_case" >
+                    <text>{{item}}</text>
+                </view>
+            </block>
+        </view>
+    </view>
+
+<!-- 轮播图 -->
+<view class="lay_col_cen pad_20 case" style="margin-top: 40rpx; width: 90%;">
+        <view class="lay_row_spa">
+            <text>商品图片</text>
+            <van-button type="primary" size="small" data-name="img" bind:click="add_img" color="#1296db">新增</van-button>
+        </view>
+        <van-divider style="width: 100%;" custom-style="margin-top:10rpx;margin-bottom:10rpx"/>
+        <view class="lay_row_sta">
+            <block wx:for="{{img}}" wx:key="index">
+                <img src="{{item}}" class="swiper_item" alt="" data-index="index" data-name="img" bindlongpress="delete_img"/>
+            </block>
+        </view>
+        
+        </view>
+
+
+        <!-- 详情 -->
+        <view class="lay_col_cen pad_20 case" style="margin-top: 40rpx; width: 90%;">
+        <view class="lay_row_spa">
+            <text>详情图</text>
+            <van-button type="primary" size="small"  data-name="img_detail" bind:click="add_img" color="#1296db">新增</van-button>
+        </view>
+        <van-divider style="width: 100%;" custom-style="margin-top:10rpx;margin-bottom:10rpx"/>
+        <view class="lay_row_sta">
+            <block wx:for="{{img_detail}}" wx:key="index">
+                <img src="{{item}}" class="swiper_item" alt="" data-index="index" data-name="img_detail" bindlongpress="delete_img"/>
+            </block>
+        </view>
+        
+        </view>
+
+
+        <!-- 提交 -->
+        <view class="lay_clo_cen" style="height:200rpx">
+            <van-button type="primary" size="large"  color="#1296db" style="width: 100%;" bind:click="submit">提交</van-button>
+        </view>
+</view>
